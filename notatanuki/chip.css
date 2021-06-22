@@ -1,0 +1,376 @@
+/*
+    =====
+    fonts
+    =====
+*/
+
+@font-face {
+    font-family: Wilson Wells;
+    src: url('https://cdn.jsdelivr.net/gh/NightTero/tumblr@main/notatanuki/Wilson%20wells.ttf');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/*
+    =======
+    globals
+    =======
+*/
+
+:root {
+    --main-font: 400 1rem/1.5rem 'Roboto', sans-serif;
+    --small-bold: 700 .73rem/1.15rem 'Roboto', sans-serif;
+    --color-1: #faf7f7;
+    --color-2: #eeeeee;
+    --color-3: #011627;
+    --color-4: #656702;
+    --color-5: #A70400;
+    --color-6: #e06666;
+    --color-7: #dbdca5;
+}
+
+*,
+*::before, 
+*::after {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html {
+    font: var(--main-font);
+}
+
+body {
+    font: 400 .77rem/1rem 'Roboto', sans-serif;
+    color: var(--color-3);
+    background: var(--color-2);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.section-two__img,
+.section-four__img {
+    -webkit-filter: drop-shadow(2px 2px 1px var(--color-4));
+            filter: drop-shadow(2px 2px 1px var(--color-4));
+}
+
+a {
+    color: inherit;
+}
+
+/*
+    ====
+    main
+    ====
+*/
+
+.main {
+    margin: 3rem auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto 1rem auto 1rem auto 1rem auto 1rem auto 1rem auto;
+        grid-template-areas:
+        "one one one"
+        "two two two"
+        "three three three"
+        "four four four"
+        "five five five"
+        "six six six"
+    ;
+    grid-gap: 1rem;
+    max-width: 60rem;
+    padding: 1rem;
+}
+
+/*
+    ===========
+    section-one
+    ===========
+*/
+
+.section-one {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: one;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: "section-one__left section-one__right";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-gap: 1rem;
+}
+
+.section-one__box-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: section-one__left;
+    text-align: center;
+}
+
+.section-one__character-name {
+    font: 400 2.3rem/2.3rem 'Wilson Wells', sans-serif;
+    text-transform: lowercase;
+    color: var(--color-4);
+    text-shadow: 3px 3px var(--color-7);
+    margin-bottom: 1rem;
+}
+
+.section-one__tagline {
+    font: var(--small-bold);
+    color: var(--color-4);
+    text-transform: uppercase;
+    text-shadow: .7px .7px var(--color-7);
+    padding: 0 3rem;
+}
+
+.section-one__ul {
+    color: var(--color-4);
+    text-shadow: .7px .7px var(--color-7);
+    margin-top: 1rem;
+}
+
+.section-one__nav-item {
+    display: inline-block;
+}
+
+.section-one__nav-item::before {
+    color: var(--color-5);
+    content: " ⦁ ";
+    display: inline-block;
+    margin: 0 .5rem;
+}
+
+.section-one__nav-item:first-of-type::before {
+    content: "";
+}
+
+.section-one__nav-link {
+    display: inline-block;
+    color: var(--color-5);
+    border-bottom: .15rem solid currentcolor;
+    padding: .2em 0;
+    margin: 0 .2rem;
+}
+
+.section-one__box-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: section-one__right;
+    border: .15rem solid var(--color-4);
+    border-radius: .15rem;
+    padding: 1rem 2.5rem;
+    list-style-position: inside;
+    -webkit-box-shadow: 2px 2px 1px var(--color-7);
+            box-shadow: 2px 2px 1px var(--color-7);
+}
+
+.section-one__h2 {
+    text-transform: uppercase;
+    margin-bottom: .35rem;
+    display: inline-block;
+    font: var(--small-bold);
+    color: var(--color-2);
+    background: var(--color-4);
+    padding: .17rem .45rem;
+}
+
+/*
+    ===========
+    section-two
+    ===========
+*/
+
+.section-two {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr . 1fr;
+    grid-template-columns: 1fr . 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: "section-two__left section-two__img section-two__right";
+    grid-area: two;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: justify;
+}
+
+.section-two__box-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: section-two__left;
+}
+
+.section-two__img {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: section-two__img;
+}
+
+.section-two__box-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: section-two__right;
+}
+
+/*
+    =============
+    section-three
+    =============
+*/
+
+.section-three {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: three;
+}
+
+.section-three__char-quote {
+    display: block;
+    text-align: center;
+    padding: .5rem;
+    border-radius: 4rem;
+    font: 400 1.7rem/1.7rem 'Wilson Wells', cursive;
+    color: var(--color-4);
+    text-shadow: 1.7px 1.7px var(--color-7);
+
+}
+
+/*
+    ============
+    section-four
+    ============
+*/
+
+.section-four {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr . 1fr;
+    grid-template-columns: 1fr . 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: "section-four__left section-four__img section-four__right";
+    grid-area: four;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: justify;
+}
+
+.section-four__box-left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: section-four__left;
+}
+
+.section-four__box-center {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: section-four__img;
+}
+
+.section-four__box-right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: section-four__right;
+}
+
+/*
+    ============
+    section-five
+    ============
+*/
+
+.section-five {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: five;
+    -webkit-filter: drop-shadow(2px 2px 1px var(--color-4));
+            filter: drop-shadow(2px 2px 1px var(--color-4));
+}
+
+.section-five__banner {
+    width: 100%;
+}
+
+/*
+    ===========
+    section-six
+    ===========
+*/
+
+.section-six {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    display: -ms-grid;
+    display: grid;
+    grid-area: six;
+    -ms-grid-columns: 1fr 3rem 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+        grid-template-areas: "section-six__left section-six__right";
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-column-gap: 3rem;
+    text-align: justify;
+}
+
+.section-six__left {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: section-six__left;
+    border-radius: .15rem;
+    border-collapse: collapse;
+    -webkit-box-shadow: 2px 2px 1px var(--color-7);
+            box-shadow: 2px 2px 1px var(--color-7);
+}
+
+.section-six__left,
+td,
+th {
+  border: 1px solid var(--color-4);
+}
+
+th {
+    text-transform: uppercase;
+    padding: .5rem 1rem;
+    color: var(--color-2);
+    background: var(--color-4);
+}
+
+td {
+    padding: .5rem 1rem;
+}
+
+.section-six__right {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: section-six__right;
+}
