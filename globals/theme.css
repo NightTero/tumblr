@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.theme {
+	position: fixed;
+	bottom: .5rem;
+	right: .5rem;
+	font-size: .8rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+.theme__left {
+	display: block;
+	margin-right: .5rem;
+	position: relative;
+	-webkit-transform: translate(2.6rem, 0px);
+	    -ms-transform: translate(2.6rem, 0px);
+	        transform: translate(2.6rem, 0px);
+	opacity: 0;
+	font-family: "Roboto", sans-serif;
+	overflow: hidden;
+	-webkit-transition: opacity .5s ease-in-out, -webkit-transform .3s ease-in-out;
+	transition: opacity .5s ease-in-out, -webkit-transform .3s ease-in-out;
+	-o-transition: transform .3s ease-in-out, opacity .5s ease-in-out;
+	transition: transform .3s ease-in-out, opacity .5s ease-in-out;
+	transition: transform .3s ease-in-out, opacity .5s ease-in-out, -webkit-transform .3s ease-in-out;
+	text-decoration: none;
+	display: block;
+	color: #000;
+}
+
+.theme:hover .theme__left {
+	opacity: 1;
+	-webkit-transform: translate(0, 0);
+	    -ms-transform: translate(0, 0);
+	        transform: translate(0, 0);
+}
+
+.theme__left-span {
+	display: block;
+	text-transform: uppercase;
+	font: bold .7rem/.7rem "Roboto", sans-serif;
+}
+
+.theme__right {
+	display: block;
+	position: relative;
+	text-transform: uppercase;
+	color: #000;
+	text-decoration: none;
+	font: bold .7rem/.7rem "Roboto", sans-serif;
+	padding: .7rem;
+	border: 2px solid #000;
+	background: #fff;
+	overflow: hidden;
+	width: .4rem;
+	height: .4rem;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
